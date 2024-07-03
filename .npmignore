@@ -3,5 +3,8 @@ test/
 src/
 lib/
 .github/
-
-README.md
+package-lock.json
+.gitignore
+tsup.config.ts
+.prettierrc.json
+LICENSE
