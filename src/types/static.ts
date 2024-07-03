@@ -1,7 +1,3 @@
-// export interface IDescendantResponse {
-//   descendant: IDescendant[];
-// }
-
 export interface IDescendant {
   descendant_id: string;
   descendant_name: string;
@@ -30,10 +26,6 @@ export interface IDescendantSkill {
 }
 
 // --------------------------------------------------
-
-// export interface IWeaponResponse {
-//   weapon: IWeapon[];
-// }
 
 export interface IWeapon {
   weapon_name: string;
@@ -65,10 +57,6 @@ export interface IWeaponFirearm {
 
 // --------------------------------------------------
 
-// export interface IModuleResponse {
-//   module: IModule[];
-// }
-
 export interface IModule {
   module_name: string;
   module_id: string;
@@ -87,10 +75,6 @@ export interface IModuleStat {
 }
 
 // --------------------------------------------------
-
-// export interface IReactorResponse {
-//   reactor: [];
-// }
 
 export interface IReactor {
   reactor_id: string;
@@ -122,10 +106,6 @@ export interface IReactorEnchantEffect {
 
 // --------------------------------------------------
 
-// export interface IExternalComponentResponse {
-//   external_component: IExternalComponent[];
-// }
-
 export interface IExternalComponent {
   external_component_id: string;
   external_component_name: string;
@@ -149,10 +129,6 @@ export interface IExternalComponentSetOptionDetail {
 }
 
 // --------------------------------------------------
-
-// export interface IRewardResponse {
-//   reward: IReward[];
-// }
 
 export interface IReward {
   map_id: string;
