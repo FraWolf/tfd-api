@@ -1,0 +1,13 @@
+# Ide
+.idea
+
+# Directories
+node_modules/
+test/
+dist/
+lib/
+
+# Environment
+.env
+.env.local
+.env.prod
