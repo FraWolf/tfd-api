@@ -4,11 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsup"
   },
-  "keywords": [],
+  "keywords": [
+    "tfd",
+    "the-first-descendant",
+    "bunny",
+    "tfd-api",
+    "the-first-descendant-api"
+  ],
   "author": "Francesco Lombardo <frawolf@outlook.it> (https://frawolf.dev)",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.14.9",
     "ts-node": "^10.9.2",
@@ -17,5 +23,8 @@
   },
   "dependencies": {
     "isomorphic-unfetch": "^4.0.2"
+  },
+  "engines": {
+    "node": ">=14.17.0"
   }
 }
