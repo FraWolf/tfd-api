@@ -3,7 +3,7 @@ import { Metadata } from "./contents/metadata";
 import { ClientOptions, Options } from "./types/general";
 import { generateOptions } from "./utils";
 
-export class Bunny {
+export class TFDApi {
   private options: ClientOptions;
 
   public account: Account;
