@@ -1,4 +1,4 @@
-import unfetch from "isomorphic-unfetch";
+import fetch from "isomorphic-unfetch";
 import { ClientOptions, Options } from "./types/general";
 
 export function generateOptions(changes: Options): ClientOptions {
@@ -11,16 +11,11 @@ export function generateOptions(changes: Options): ClientOptions {
   };
 }
 
-export function formatQueryStrings(
-  uri: string,
-  params: Record<string, string | number>
-) {
+export function formatQueryStrings(uri: string, params: Record<string, string | number>) {
   let fullUrl: string = uri;
   if (Object.keys(params).length > 0) {
     const searchParams = new URLSearchParams();
-    Object.entries(params).forEach(([key, value]) =>
-      searchParams.append(key, value.toString())
-    );
+    Object.entries(params).forEach(([key, value]) => searchParams.append(key, value.toString()));
 
     fullUrl += `?${searchParams.toString()}`;
   }
@@ -29,14 +24,12 @@ export function formatQueryStrings(
 }
 
 export async function httpRequest(url: string, headers?: HeadersInit) {
-  return await unfetch(url, {
+  return await fetch(url, {
     method: "GET",
     headers,
   })
     .then((res) => {
-      const isJson =
-        res.headers.get("Content-Type") &&
-        res.headers.get("Content-Type")?.includes("application/json");
+      const isJson = res.headers.get("Content-Type") && res.headers.get("Content-Type")?.includes("application/json");
       return isJson
         ? res.json()
         : {
