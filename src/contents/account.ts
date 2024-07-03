@@ -29,6 +29,11 @@ export class Account {
     return httpRequest(endpoint, this.headers);
   }
 
+  /**
+   * Retrieves information about the equipped descendant.
+   * @param ouid OUID
+   * @returns
+   */
   public getUserDescendant(ouid: string): Promise<APIResponse<UserDescendant>> {
     const endpoint = formatQueryStrings(`${this.url}/tfd/v1/user/descendant`, {
       ouid,
@@ -36,6 +41,12 @@ export class Account {
     return httpRequest(endpoint, this.headers);
   }
 
+  /**
+   * Retrieves information about weapons equipped in all slots.
+   * @param ouid OUID
+   * @param language_code language code
+   * @returns
+   */
   public getUserWeapon(ouid: string, language_code: Languages = this.default_language): Promise<APIResponse<UserWeapon>> {
     const endpoint = formatQueryStrings(`${this.url}/tfd/v1/user/weapon`, {
       ouid,
@@ -44,6 +55,12 @@ export class Account {
     return httpRequest(endpoint, this.headers);
   }
 
+  /**
+   * Retrieves information about the equipped Reactor.
+   * @param ouid OUID
+   * @param language_code language code
+   * @returns
+   */
   public getUserReactor(ouid: string, language_code: Languages = this.default_language): Promise<APIResponse<UserReactor>> {
     const endpoint = formatQueryStrings(`${this.url}/tfd/v1/user/reactor`, {
       ouid,
@@ -52,6 +69,12 @@ export class Account {
     return httpRequest(endpoint, this.headers);
   }
 
+  /**
+   * Retrieves information about external components equipped in all slots.
+   * @param ouid OUID
+   * @param language_code language code
+   * @returns
+   */
   public getUserExternalComponent(
     ouid: string,
     language_code: Languages = this.default_language
