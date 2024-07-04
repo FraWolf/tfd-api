@@ -8,6 +8,7 @@
   "scripts": {
     "build": "tsup",
     "lint": "tsc"
+    "lint": "tsc --noEmit"
   },
   "keywords": [
     "tfd",
