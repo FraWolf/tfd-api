@@ -1,6 +1,7 @@
-import { ExternalComponent, User, UserBasic, UserDescendant, UserReactor, UserWeapon } from "../types/account";
-import { APIResponse, Languages } from "../types/general";
-import { RecommendationModule } from "../types/module";
+import type { ExternalComponent, User, UserBasic, UserDescendant, UserReactor, UserWeapon } from "../types/account";
+import type { APIResponse, Languages } from "../types/general";
+import type { RecommendationModule } from "../types/module";
+
 import { formatQueryStrings, httpRequest } from "../utils";
 
 export class Account {

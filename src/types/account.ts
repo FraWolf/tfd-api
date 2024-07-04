@@ -1,4 +1,4 @@
-import { Languages } from "./general";
+import type { Languages } from "./general";
 
 export interface User {
   ouid: string;

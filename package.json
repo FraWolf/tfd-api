@@ -1,10 +1,13 @@
 {
   "name": "tfd-api",
   "version": "1.0.7",
-  "description": "",
-  "main": "index.js",
+  "description": "A simple API wrapper to interact with The First Descendant API",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsup"
+    "build": "tsup",
+    "lint": "tsc"
   },
   "keywords": [
     "tfd",
@@ -13,17 +16,26 @@
     "tfd-api",
     "the-first-descendant-api"
   ],
-  "author": "Francesco Lombardo <frawolf@outlook.it> (https://frawolf.dev)",
   "license": "MIT",
+  "author": "Francesco Lombardo <frawolf@outlook.it> (https://frawolf.dev)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FraWolf/tfd-api"
+  },
+  "bugs": {
+    "url": "https://github.com/FraWolf/tfd-api/issues",
+    "email": "frawolf@outlook.it"
+  },
+  "homepage": "https://github.com/FraWolf/tfd-api",
+  "engines": {
+    "node": ">=14.17.0"
+  },
+  "dependencies": {
+    "isomorphic-unfetch": "^4.0.2"
+  },
   "devDependencies": {
     "ts-node": "^10.9.2",
     "tsup": "^8.1.0",
     "typescript": "^5.5.3"
-  },
-  "dependencies": {
-    "isomorphic-unfetch": "^3.1.0"
-  },
-  "engines": {
-    "node": ">=14.17.0"
   }
 }
