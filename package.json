@@ -7,7 +7,6 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsup",
-    "lint": "tsc"
     "lint": "tsc --noEmit"
   },
   "keywords": [
@@ -29,7 +28,8 @@
   },
   "homepage": "https://github.com/FraWolf/tfd-api",
   "engines": {
-    "node": ">=14.17.0"
+    "node": ">=14.17.0",
+    "pnpm": ">=8.0.0"
   },
   "dependencies": {
     "isomorphic-unfetch": "^4.0.2"
