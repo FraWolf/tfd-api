@@ -1,9 +1,8 @@
 node_modules/
 test/
 src/
-dist/
 .github/
-package-lock.json
+pnpm-lock.yaml
 .gitignore
 tsup.config.ts
 .prettierrc.json
