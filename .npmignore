@@ -1,7 +1,7 @@
 node_modules/
 test/
 src/
-lib/
+dist/
 .github/
 package-lock.json
 .gitignore
