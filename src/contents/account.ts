@@ -95,7 +95,7 @@ export class Account {
    * @returns
    */
   public getRecommendationModule(descendant_id: string, weapon_id: string, void_battle_id: string, period: string) {
-    const endpoint = formatQueryStrings(`${this.url}/tfd/v1/user/external-component`, {
+    const endpoint = formatQueryStrings(`${this.url}/tfd/v1/recommendation/module`, {
       descendant_id,
       weapon_id,
       void_battle_id,
