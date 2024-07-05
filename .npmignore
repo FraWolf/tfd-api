@@ -1,10 +1,11 @@
 node_modules/
 test/
 src/
-lib/
+data/
 .github/
-package-lock.json
+pnpm-lock.yaml
 .gitignore
 tsup.config.ts
 .prettierrc.json
 LICENSE
+tsconfig.json

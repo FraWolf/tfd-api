@@ -1,4 +1,4 @@
-import { ErrorMessage } from "./errors";
+import type { ErrorMessage } from "./errors";
 
 export type Languages =
   | "ko"

@@ -1,5 +1,5 @@
-import { APIResponse, Languages } from "../types/general";
-import {
+import type { APIResponse, Languages } from "../types/general";
+import type {
   IDescendant,
   IExternalComponent,
   IModule,
@@ -10,10 +10,11 @@ import {
   IVoidBattle,
   IWeapon,
 } from "../types/static";
+
 import { httpRequest } from "../utils";
 
 export class Metadata {
-  constructor(private url: string, private default_language: Languages) {}
+  constructor(private url: string, private default_language: Languages) { }
 
   /**
    * Retrieve descendant metadata

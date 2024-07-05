@@ -1,5 +1,6 @@
 import fetch from "isomorphic-unfetch";
-import { ClientOptions, Options } from "./types/general";
+
+import type { ClientOptions, Options } from "./types";
 
 export function generateOptions(changes: Options): ClientOptions {
   return {
@@ -33,11 +34,11 @@ export async function httpRequest(url: string, headers?: HeadersInit) {
       return isJson
         ? res.json()
         : {
-            error: {
-              name: "CUSTOMERROR",
-              message: "Unable to parse API response",
-            },
-          };
+          error: {
+            name: "CUSTOMERROR",
+            message: "Unable to parse API response",
+          },
+        };
     })
     .catch((e) => {
       console.log(`[FETCHER//ERROR] ${e.message}`);
