@@ -1,6 +1,8 @@
+import type { ClientOptions, Options } from "./types";
+
 import { Account } from "./contents/account";
 import { Metadata } from "./contents/metadata";
-import { ClientOptions, Options } from "./types/general";
+
 import { generateOptions } from "./utils";
 
 export class TFDApi {
