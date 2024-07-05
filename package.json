@@ -31,13 +31,13 @@
     "node": ">=14.17.0",
     "pnpm": ">=8.0.0"
   },
-  "dependencies": {
-    "isomorphic-unfetch": "^4.0.2"
-  },
   "devDependencies": {
     "@types/node": "^20.14.9",
     "ts-node": "^10.9.2",
     "tsup": "^8.1.0",
     "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "isomorphic-unfetch": "3.1.0"
   }
 }
