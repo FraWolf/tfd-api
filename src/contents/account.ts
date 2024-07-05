@@ -1,6 +1,6 @@
 import type { ExternalComponent, User, UserBasic, UserDescendant, UserReactor, UserWeapon } from "../types/account";
 import type { APIResponse, Languages } from "../types/general";
-import type { RecommendationModule } from "../types/module";
+import type { QueryPeriod, RecommendationModule } from "../types/module";
 
 import { formatQueryStrings, httpRequest } from "../utils";
 
