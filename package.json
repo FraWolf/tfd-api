@@ -1,6 +1,6 @@
 {
   "name": "tfd-api",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A simple API wrapper to interact with The First Descendant API",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
