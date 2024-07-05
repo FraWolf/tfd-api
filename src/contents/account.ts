@@ -100,7 +100,7 @@ export class Account {
     descendant_id: string,
     weapon_id: string,
     void_battle_id: string,
-    period: string
+    period: QueryPeriod
   ): Promise<RecommendationModule> {
     const endpoint = formatQueryStrings(`${this.url}/tfd/v1/recommendation/module`, {
       descendant_id,

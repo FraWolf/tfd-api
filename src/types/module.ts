@@ -1,3 +1,9 @@
+export enum QueryPeriod {
+  Last7Days = 0,
+  Last30Days = 1,
+  AllTime = 2,
+}
+
 export interface RecommendationModule {
   descendant: RecommendationModuleDescendant;
   weapon: RecommendationModuleWeapon;
