@@ -1,6 +1,6 @@
 import { ExternalComponent, User, UserBasic, UserDescendant, UserReactor, UserWeapon } from "../types/account";
 import { APIResponse, Languages } from "../types/general";
-import { RecommendationModule } from "../types/module";
+import { QueryPeriod, RecommendationModule } from "../types/module";
 import { formatQueryStrings, httpRequest } from "../utils";
 
 export class Account {
@@ -99,7 +99,7 @@ export class Account {
     descendant_id: string,
     weapon_id: string,
     void_battle_id: string,
-    period: string
+    period: QueryPeriod
   ): Promise<RecommendationModule> {
     const endpoint = formatQueryStrings(`${this.url}/tfd/v1/recommendation/module`, {
       descendant_id,
