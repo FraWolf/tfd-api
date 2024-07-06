@@ -6,6 +6,8 @@ export function generateOptions(changes: Options): ClientOptions {
   return {
     host: "https://open.api.nexon.com",
     default_language: changes?.default_language || "en",
+    definitions_refresh: changes?.definitions_refresh || false,
+    definitions_refresh_timer: changes?.definitions_refresh_timer || 600000, // 10 minutes
     headers: {
       "x-nxopen-api-key": changes?.api_key,
     },
@@ -34,14 +36,19 @@ export async function httpRequest(url: string, headers?: HeadersInit) {
       return isJson
         ? res.json()
         : {
-          error: {
-            name: "CUSTOMERROR",
-            message: "Unable to parse API response",
-          },
-        };
+            error: {
+              name: "CUSTOMERROR",
+              message: "Unable to parse API response",
+            },
+          };
     })
     .catch((e) => {
       console.log(`[FETCHER//ERROR] ${e.message}`);
       return null;
     });
+}
+
+export interface BasicDefinitionGetter<T> {
+  get(item_id: string): T | null;
+  search(item_name: string): T[];
 }
