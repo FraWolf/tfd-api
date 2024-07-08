@@ -3,6 +3,7 @@ test/
 src/
 data/
 .github/
+.changeset/
 pnpm-lock.yaml
 .gitignore
 tsup.config.ts
