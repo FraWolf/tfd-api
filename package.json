@@ -7,6 +7,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsup",
+    "release": "pnpm run build && changeset publish",
     "lint": "tsc --noEmit"
   },
   "keywords": [
@@ -32,6 +33,7 @@
     "pnpm": ">=8.0.0"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.27.7",
     "@types/node": "^20.14.9",
     "ts-node": "^10.9.2",
     "tsup": "^8.1.0",
